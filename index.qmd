@@ -3,7 +3,7 @@ title: "Demo Deck 2"
 author: "Matt"
 format: 
   revealjs:
-    self-contained: true
+    self-contained: false
 ---
 
 ## Title Page

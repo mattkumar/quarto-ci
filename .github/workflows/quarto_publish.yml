@@ -36,6 +36,11 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
+      - name: Render Quarto
+        shell: Rscript {0}
+        run: |
+          quarto::quarto_render("index.qmd")
+          
       - name: Publish to GitHub Pages (and render)
         uses: quarto-dev/quarto-actions/publish@v2
         with:
