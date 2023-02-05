@@ -50,8 +50,6 @@ jobs:
      - name: Download artifact
        uses: actions/download-artifact@v1.0.0
        with:
-         name: index.html
-         path: . 
          # Artifact name
          name: index_files # optional
          # Destination path
