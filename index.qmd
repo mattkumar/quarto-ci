@@ -1,7 +1,9 @@
 ---
 title: "Demo Deck"
 author: "Matt"
-format: revealjs
+format: 
+  revealjs:
+    self-contained: true
 ---
 
 ## Title Page
@@ -11,3 +13,7 @@ A title page
 ## New Slide
 
 A new slide
+
+output:
+  revealjs::revealjs_presentation:
+    self_contained: false
