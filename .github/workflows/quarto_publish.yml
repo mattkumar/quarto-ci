@@ -22,12 +22,16 @@ jobs:
         if (!requireNamespace("renv", quietly = TRUE)) install.packages("renv")
         renv::restore()
         
-    - name: "Install Quarto and render"
-      uses: pommevilla/quarto-render@main
+    - name: Set up Quarto
+      uses: quarto-dev/quarto-actions/setup@v2
+        
+    - name: Render Quarto Document Manually
+      run: |
+        Rscript -e "install.packages('quarto')"
+        Rscript -e "library(quarto); render_document('index.qmd')"
 
-    - name: "Deploy to gh-pages"
+    - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
-      if: github.ref == 'refs/heads/main'
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./_site
+        publish_dir: document_output
