@@ -16,22 +16,16 @@ jobs:
         sudo apt-get update -y
         sudo apt-get install -y libcurl4-openssl-dev
           
-    - name: "Install R Packages: Restore packages"
-      shell: Rscript {0}
-      run: |
-        if (!requireNamespace("renv", quietly = TRUE)) install.packages("renv")
-        renv::restore()
-        
     - name: Set up Quarto
       uses: quarto-dev/quarto-actions/setup@v2
         
     - name: Render Quarto Document Manually
       run: |
         Rscript -e "install.packages('quarto')"
-        Rscript -e "library(quarto); render_document('index.qmd')"
+        Rscript -e "library(quarto); render_quarto('index.qmd')"
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: document_output
+        publish_dir: index_files
