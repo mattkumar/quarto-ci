@@ -1,5 +1,5 @@
 ---
-title: "Demo Deck 2"
+title: "THE MANUAL WAY"
 author: "Matt"
 format: 
   revealjs:
@@ -8,12 +8,4 @@ format:
 
 ## Title Page
 
-A title page
-
-## New Slide
-
-A new slide
-
-## Newer Slide
-
-Yet Another Slide
+HIIIIIIIIIIIIIIII
