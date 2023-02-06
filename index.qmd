@@ -1,0 +1,11 @@
+---
+title: "THE MANUAL WAY"
+author: "Matt"
+format: 
+  revealjs:
+    self-contained: false
+---
+
+## Title Page
+
+HIIIIIIIIIIIIIIII
