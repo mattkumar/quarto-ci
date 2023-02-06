@@ -15,14 +15,14 @@ jobs:
       run: |
         sudo apt-get update -y
         sudo apt-get install -y libcurl4-openssl-dev
-          
+           
     - name: Set up Quarto
       uses: quarto-dev/quarto-actions/setup@v2
         
     - name: Render Quarto Document Manually
       run: |
         Rscript -e "install.packages('quarto')"
-        Rscript -e "library(quarto); render_quarto('index.qmd')"
+        Rscript -e "quarto::quarto_render('index.qmd')"
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
