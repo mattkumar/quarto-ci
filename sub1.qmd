@@ -1,5 +1,5 @@
 ---
-title: "THE MANUAL WAY"
+title: "zzzzzz"
 author: "Matt"
 format: 
   revealjs:
