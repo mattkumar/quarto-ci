@@ -22,7 +22,8 @@ jobs:
     - name: Render Quarto Document Manually
       run: |
         Rscript -e "install.packages('quarto')"
-        Rscript -e "quarto::quarto_render('index.qmd')"
+        Rscript -e "quarto::quarto_render('sub1.qmd');
+                    quarto::quarto_render('index.qmd')"
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
